@@ -5,7 +5,7 @@ module.exports = class EmbedCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'sayembed',
-            group: 'say',
+            group: 'other commands',
             memberName: 'sayembed',
             description: 'Embeds the text you provide.',
             userPermissions: ['MANAGE_MESSAGES'],
