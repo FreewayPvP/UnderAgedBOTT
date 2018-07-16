@@ -65,7 +65,8 @@ client.registry
   .registerGroups([
     ['help page', 'Help Page'],
     ['memes', 'Meme Commands'],
-    ['other commands', 'Others']
+    ['other commands', 'Others'],
+    ['moderation', 'Moderations']
     ])
 
     .registerDefaultGroups()
