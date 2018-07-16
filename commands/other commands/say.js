@@ -4,7 +4,7 @@ module.exports = class SayCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'say',
-            group: 'say',
+            group: 'other commands',
             memberName: 'say',
             description: 'Replies with the text you provide.',
             userPermissions: ['MANAGE_MESSAGES'],
