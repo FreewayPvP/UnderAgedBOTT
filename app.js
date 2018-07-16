@@ -73,4 +73,4 @@ client.registry
     .registerDefaultCommands({ help: false, ping: false })
     .registerCommandsIn(path.join(__dirname, 'commands'))
 
-client.login('NDY3Mjg0MzA3MjE2NDMzMTUz.Dioi2g.MYEE7VACO2rqsvdNcT_nKfGSe6Q');
+client.login('process.env.BOT_TOKEN');
