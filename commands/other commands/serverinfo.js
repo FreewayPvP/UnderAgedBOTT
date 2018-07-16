@@ -14,7 +14,7 @@ module.exports = class ServerInfoCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'server-info',
-			group: 'info',
+			group: 'other commands',
 			memberName: 'server',
 			description: 'Get info on the server.',
 			details: `Get detailed information on the server.`,
