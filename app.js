@@ -28,6 +28,47 @@ client.on("ready", () => {
     client.user.setStatus('online');
 });
 
+Client.on('message', msg => {
+  // Set prefix
+  let prefix = "!"
+
+  if (!msg.content.startsWith(prefix)
+    || msg.author.bot
+  ) return
+
+  if (msg.content.startsWith(prefix + 'role')) {
+
+    // Get args
+    let args = msg.content.split(" ");
+
+    if (args.length < 2 || args[1] == '--help') {
+      msg.channel.sendMessage('These are the roles you\'re allowed to join: \n'+
+        allowedString +
+        '\nuse "!role `<role_name>` to join a role')
+
+      return
+    }
+
+    // Get the role
+    let role = msg.guild.roles.find("name", args[1].toLowerCase());
+
+    if (!role || role === null) {
+      msg.channel.sendMessage('Could not find a role by that name.')
+      return
+    }
+
+    if (allowedRoles.indexOf(role.name) === -1) {
+      msg.channel.sendMessage('Doesn\'t look like you\'re allowed to join that group. \nFor a list of allowed roles type `!role --help`')
+      return
+    }
+
+    msg.member.addRole(role).catch(console.error);
+    msg.channel.sendMessage('You\'ve been added to: ' + role.name)
+
+    return
+  }
+})
+
 client.on("guildMemberAdd", member => {
   member.addRole('467978289173102602')
   member.addRole('467978289173102602') 
