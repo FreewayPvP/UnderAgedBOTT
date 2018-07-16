@@ -28,7 +28,7 @@ client.on("ready", () => {
     client.user.setStatus('online');
 });
 
-Client.on('message', msg => {
+client.on('message', msg => {
   // Set prefix
   let prefix = "!"
 
