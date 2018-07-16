@@ -7,7 +7,7 @@ class EmbedCommand extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'warn',
-            group: 'moderation',
+            group: 'other commands',
             memberName: 'warn',
             description: 'Warning.....',
             guildOnly: true
