@@ -70,7 +70,7 @@ client.on('message', msg => {
 })
 
 client.on("guildMemberAdd", member => {
-  member.addRoles(['467978092682412032', '467978289173102602'])
+  member.addRoles(['467978092682412032', '467978289173102602', '467975285719957504'])
 });
 
 client.on("guildMemberAdd", (member) => {
